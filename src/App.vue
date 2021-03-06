@@ -1,23 +1,23 @@
 <template>
   <v-app>
-    <v-app-bar app color="gray" dark>
+    <!-- <v-app-bar app color="gray" dark>
       <div class="text-h4">Zones</div>
-    </v-app-bar>
+    </v-app-bar> -->
 
     <v-main>
-      <HelloWorld />
+      <Zones />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Zones from "./components/Zones";
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld
+    Zones
   },
 
   data: () => ({
