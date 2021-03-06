@@ -33,7 +33,7 @@
                 v-for="zone in zones"
                 @click="goTo(zone.link)"
               >
-                <div class="delete-zone" @click="deleteZone(zone.id)">
+                <div class="delete-zone" @click.stop="deleteZone(zone.id)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -190,6 +190,7 @@ export default {
       const idx = this.zones.findIndex((x) => x.id === id);
       this.zones.splice(idx, 1);
       this.save();
+      this.isAdding = false;
     },
     copyLink() {
       var dummy = document.createElement("input"),
