@@ -150,13 +150,15 @@ export default {
       this.save();
     },
     save() {
-      window.location.href = `/${encodeURIComponent(
+      const url = `/${encodeURIComponent(
         JSON.stringify({
           url: this.image,
           zones: this.zones,
           baseWidth: this.baseWidth,
         })
       )}`;
+
+      window.history.pushState({}, "zones", url);
     },
     getRelPos(sourceX, sourceY) {
       const { x, y } = this.getZonesRect();
