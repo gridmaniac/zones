@@ -5,23 +5,7 @@
     </v-app-bar> -->
 
     <v-main>
-      <Zones />
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
-
-<script>
-import Zones from "./components/Zones";
-
-export default {
-  name: "App",
-
-  components: {
-    Zones
-  },
-
-  data: () => ({
-    //
-  })
-};
-</script>
